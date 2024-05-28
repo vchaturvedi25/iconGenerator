@@ -1,0 +1,25 @@
+.squareContainer{
+    height:256px;
+    width: 256px;
+}
+
+.buttonsClass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parentClass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.articleBox{
+    width: 512px;
+}
+
+.imgClass{
+    display: flex;
+    justify-content: center;
+}
