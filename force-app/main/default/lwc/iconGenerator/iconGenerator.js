@@ -26,8 +26,7 @@ export default class IconGenerator extends LightningElement {
                 secondaryColor: this.secondaryCol,
                 shape:this.shape
                 }
-            );    
-            console.log('data is '+iconResult);
+            );
             this.showHideStyle = 'imgClass';
             this.photoUrl = iconResult;
             this.urlReceived = true;
@@ -38,25 +37,16 @@ export default class IconGenerator extends LightningElement {
     }
 
     submitIcon(){
-        console.log('inside submit icon');
         var iconForCmp = this.template.querySelector('[data-id="iconFor"]');
-        console.log('iconForCmp is '+ iconForCmp);
         var iconForVal = iconForCmp.value;
-        console.log('iconForVal is '+ iconForVal);
         var primaryColCmp = this.template.querySelector('[data-id="primaryColor"]');
-        console.log('primaryColCmp is '+ primaryColCmp);
         var primaryColVal = primaryColCmp.value;
-        console.log('primaryColVal is '+ primaryColVal);
         var secondaryColCmp = this.template.querySelector('[data-id="secondaryColor"]');
-        console.log('secondaryColCmp is '+ secondaryColCmp);
         var secondaryColVal = secondaryColCmp.value;
-        console.log('secondaryColVal is '+ secondaryColVal);
         if(this.isEmptyCheck(iconForVal) || this.isEmptyCheck(primaryColVal) || this.isEmptyCheck(secondaryColVal)){
-            console.log('inside if empty');
             this.showErrorToast();
         }
         else{
-            console.log('inside submission');
             this.primaryCol = primaryColVal;
             this.secondaryCol = secondaryColVal;
             this.iconFor = iconForVal;
@@ -82,7 +72,6 @@ export default class IconGenerator extends LightningElement {
     }
 
     isEmptyCheck(val){
-        console.log('inside empty check');
         if(val == '' || val == null || val == undefined){
             return true;
         }
